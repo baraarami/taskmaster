@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <Button
+       android:id="@+id/button2"
+       android:layout_width="122dp"
+       android:layout_height="49dp"
+       android:layout_marginStart="62dp"
+       android:layout_marginLeft="62dp"
+       android:layout_marginEnd="34dp"
+       android:layout_marginRight="34dp"
+       android:layout_marginBottom="140dp"
+       android:onClick="addTask"
+       android:text="ADD TASK"
+       app:backgroundTint="#4CAF50"
+       app:layout_constrainBottom_toBottomOf="parent"
+       app:layout_constrainEnd_toStartOf="@+id/button"
+       app:layout_constrainHorizantal_bais="1.0"
+       app:layout_constrainStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="409dp"
+        android:layout_height="144dp"
+        android:layout_marginBottom="231dp"
+        app:layout_constrainBottom_toToptOf="@+id/button2"
+        app:srcCompat="@drawable/logotask"
+        tools:layout_editor_absolutex="-2dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="122dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginRight="71dp"
+        android:layout_marginBottom="140dp"
+        android:onClick="allTasks"
+        android:text="@string/all_tasks"
+        app:backgroundTint="#4CAF50"
+        app:layout_constrainBottom_toBottomOf="parent"
+        app:layout_constrainEnd_toEndOf="parent"
+        app:layout_constrainStart_toEndOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="337dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="35dp"
+        android:rotationX="-4"
+        android:text="@string/my_tasks"
+        android:textSize="24sp"
+        app:layout_constrainBottom_toTopOf="@+id/imageView"
+        app:layout_constrainEnd_toEndOf="parent"
+        app:layout_constrainStart_toStartOf="@+id/parent"
+        app:layout_constrainTop_toTopOf="@+id/button2" />
+
+
+</android.support.design.widget.CoordinatorLayout>
