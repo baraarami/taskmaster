@@ -1,100 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddTask">
-
-
-    <EditText
-        android:id="@+id/editTexttextpersonName2"
-        android:layout_width="284dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginEnd="81dp"
-        android:layout_marginBottom="140dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/task_discription"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editTexttextpersonName"
-        android:layout_width="284dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginEnd="81dp"
-        android:layout_marginBottom="136dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/task_title"
-        app:layout_constraintBottom_toTopOf="@+id/editTexttextpersonName2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginEnd="258dp"
-        android:layout_marginBottom="60dp"
-        android:onClick="submitTask"
-        android:text="@string/add_task"
-        app:backgroundTint="#4CAF50"
-        app:layout_constraintBottom_toTopOf="@+id/textview3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+    tools:context=".features.AddTask">
+    <!--    android:theme="@style/TextAppearance.AppCompat.Widget.Button.Colored">-->
 
     <TextView
-        android:id="@+id/textview2"
-        android:layout_width="159dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="206dp"
-        android:layout_marginBottom="55dp"
-        android:text="@string/add_task"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextpersonName"
+        android:id="@+id/newTaskSubmitSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:labelFor="@id/newTaskBody"
+        android:text="@string/new_task_created"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newTaskSubmit" />
+
+    <TextView
+        android:id="@+id/taskBodyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:labelFor="@id/newTaskBody"
+        android:text="@string/task_body"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/newTaskName" />
 
     <TextView
-        android:id="@+id/textview3"
-        android:layout_width="104dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginEnd="233dp"
-        android:layout_marginBottom="52dp"
-        android:text="@string/total_tasks_0"
-        app:layout_constraintTop_toTopOf="@+id/textview4"
+        android:id="@+id/addATask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/add_task"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="sans-serif-condensed-medium"
+        />
+
+    <EditText
+        android:id="@+id/newTaskName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskNameLabel"
+        android:importantForAutofill="no" />
 
     <TextView
-        android:id="@+id/textview4"
-        android:layout_width="153dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="129dp"
-        android:layout_marginEnd="129dp"
-        android:layout_marginBottom="36dp"
-        android:text="@string/submit"
-        android:textColor="#009688"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/taskNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:labelFor="@id/newTaskName"
+        android:text="@string/task_name"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addATask" />
+
+    <EditText
+        android:id="@+id/newTaskBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskBodyLabel"
+        android:importantForAutofill="no" />
 
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/newStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newStatusLabel"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/newStatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:labelFor="@id/newTaskName"
+        android:text="@string/status"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/newTaskSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newTaskBody"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <Spinner
+        android:id="@+id/spinner_status"
+        android:layout_width="225dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="152dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskBodyLabel" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_status">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/choose_a_team"
+            android:textSize="23sp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/team1"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickRadioButton"
+                android:text="@string/team_1" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/team2"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickRadioButton"
+                android:text="@string/team_2" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/team3"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickRadioButton"
+                android:text="@string/team_3" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/uploadFileBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/upload_file"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/newTaskSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="@string/create_new_task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newStatus" />
+
+</androidx>
