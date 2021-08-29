@@ -1,3 +1,7 @@
+![screenshot1](https://user-images.githubusercontent.com/79080942/131261673-1dca195a-18c1-4a54-85e6-7dc6943356e1.png)
+![screenshot2](https://user-images.githubusercontent.com/79080942/131261677-50b37007-fe7a-4e66-bb75-883ca86b9afc.png)
+![screenshot3](https://user-images.githubusercontent.com/79080942/131261682-ae61a143-5ad6-46af-8c0a-86d7cad98006.png)
+![screenshot5](https://user-images.githubusercontent.com/79080942/131261685-72191361-f722-4d14-aaf1-5cb571198672.png)
 # Task Master 
 
 ![Screenshot_1](https://user-images.githubusercontent.com/79080942/131218292-82439217-65a3-42a9-a386-e84a8550de57.png)
