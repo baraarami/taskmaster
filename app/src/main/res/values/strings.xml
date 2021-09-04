@@ -38,4 +38,5 @@
     <string name="upload_file">upload file</string>
     <string name="link">link</string>
     <string name="todo">TODO</string>
+    <string name="location">Location</string>
 </resources>
